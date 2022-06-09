@@ -1,4 +1,4 @@
-package org.wecancodeit.librarydemo;
+package org.wecancodeit.librarydemo.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,6 +21,14 @@ public class Campus {
         return id;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public Collection<Book> getBooks() {
+        return books;
+    }
+
     //default no args constructor required for jpa
     public Campus(){
 
@@ -30,9 +38,6 @@ public class Campus {
         this.location = location;
     }
 
-    public Collection<Book> getBooks() {
-        return books;
-    }
 
     @Override
     public boolean equals(Object o) {

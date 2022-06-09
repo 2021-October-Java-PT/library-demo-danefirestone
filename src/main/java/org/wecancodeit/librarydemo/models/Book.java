@@ -1,4 +1,4 @@
-package org.wecancodeit.librarydemo;
+package org.wecancodeit.librarydemo.models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -21,6 +21,22 @@ public class Book {
 
     public Long getId() {
         return id;
+    }
+
+    public Collection<Author> getAuthors() {
+        return authors;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Campus getCampus() {
+        return campus;
     }
 
     public Book(){
@@ -46,4 +62,5 @@ public class Book {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
